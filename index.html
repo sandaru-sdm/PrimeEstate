@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrimeEstate Land Sales</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">PrimeEstate</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#properties">Properties</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="nav-link nav-btn" href="#properties">View Listings</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Find Your Perfect Plot of Land</h1>
+                <p>Discover premium land opportunities in prime locations for investment, development, or your dream home</p>
+                <a href="#properties" class="btn hero-btn">Explore Properties</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="about-content">
+                        <h2>Your Trusted Partner in Land Investment</h2>
+                        <p>For over 20 years, PrimeEstate has been the leading land acquisition and sales company in the region. We specialize in identifying premium land opportunities with exceptional investment potential.</p>
+                        <p>Our team of land experts has deep knowledge of local markets, zoning regulations, and development opportunities, ensuring you make informed decisions when purchasing land.</p>
+                        <a href="#properties" class="btn btn-success py-2 px-4">View Our Listings</a>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="about-img">
+                        <img src="/api/placeholder/700/500" alt="Beautiful Land" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Why Choose Us</h2>
+                <p>We offer a comprehensive range of services to ensure your land purchase is smooth and profitable</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>Extensive Selection</h3>
+                        <p>Access to a wide variety of land options across urban, suburban, and rural locations to match your specific needs.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Vetted Properties</h3>
+                        <p>All our land listings undergo thorough due diligence, including title verification and environmental assessments.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-file-contract"></i>
+                        </div>
+                        <h3>Legal Assistance</h3>
+                        <p>Our team of legal experts ensures all transactions are smooth, transparent, and legally compliant.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <h3>Financing Options</h3>
+                        <p>Access to flexible financing solutions and payment plans tailored to your budget and investment goals.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-drafting-compass"></i>
+                        </div>
+                        <h3>Development Consulting</h3>
+                        <p>Expert advice on land development possibilities, zoning regulations, and maximizing property value.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>Dedicated Support</h3>
+                        <p>Personalized customer service and ongoing support before, during, and after your land purchase.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Properties Section -->
+    <section class="properties-section" id="properties">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Available Land Properties</h2>
+                <p>Explore our diverse selection of premium land opportunities</p>
+            </div>
+            <div class="filter-bar" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-md-3 mb-3 mb-md-0">
+                        <select class="form-select" id="location-filter">
+                            <option selected>All Locations</option>
+                            <option>Urban</option>
+                            <option>Suburban</option>
+                            <option>Rural</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 mb-3 mb-md-0">
+                        <select class="form-select" id="price-filter">
+                            <option selected>All Prices</option>
+                            <option>Under $100,000</option>
+                            <option>$100,000 - $250,000</option>
+                            <option>$250,000 - $500,000</option>
+                            <option>Over $500,000</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 mb-3 mb-md-0">
+                        <select class="form-select" id="size-filter">
+                            <option selected>All Sizes</option>
+                            <option>Under 1 Acre</option>
+                            <option>1-5 Acres</option>
+                            <option>5-10 Acres</option>
+                            <option>Over 10 Acres</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-success w-100" id="filter-btn">Filter Results</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="properties-container">
+                <!-- Properties will be loaded dynamically via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>What Our Clients Say</h2>
+                <p>Hear from our satisfied clients about their experience with PrimeEstate</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">"I was looking for a plot to build my dream home and PrimeEstate made the process incredibly smooth. Their knowledge of the local market helped me find the perfect location."</p>
+                            <div class="testimonial-author">
+                                <div class="author-img">
+                                    <img src="/api/placeholder/100/100" alt="Client" class="img-fluid">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Robert Johnson</h4>
+                                    <p>Homeowner</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">"As a real estate investor, I've worked with many agencies, but PrimeEstate stands out for their professionalism and attention to detail. My investment has already appreciated significantly."</p>
+                            <div class="testimonial-author">
+                                <div class="author-img">
+                                    <img src="/api/placeholder/100/100" alt="Client" class="img-fluid">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Sarah Williams</h4>
+                                    <p>Real Estate Investor</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">"PrimeEstate helped us find the perfect agricultural land for our family farm. Their expertise in rural properties and water rights was invaluable to making the right decision."</p>
+                            <div class="testimonial-author">
+                                <div class="author-img">
+                                    <img src="/api/placeholder/100/100" alt="Client" class="img-fluid">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Michael & Lisa Thompson</h4>
+                                    <p>Farm Owners</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Get In Touch</h2>
+                <p>Have questions about our land properties? Contact us today!</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-5" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Our Office</h4>
+                                <p>123 Land Street, Suite 500<br>New York, NY 10001</p>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Call Us</h4>
+                                <p>(555) 123-4567<br>(555) 765-4321</p>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email Us</h4>
+                                <p>info@primeestate.com<br>sales@primeestate.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Operating Hours</h4>
+                                <p>Monday - Friday: 9am - 6pm<br>Saturday: 10am - 2pm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="contact-form p-4 bg-white rounded shadow">
+                        <h3 class="mb-4">Send us a message</h3>
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" placeholder="Your Name" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <input type="email" class="form-control" placeholder="Your Email" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Subject" required>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-12" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="map-container">
+                        <!-- Replace with actual map embed code -->
+                        <img src="/api/placeholder/1200/400" alt="Map" class="img-fluid w-100 h-100 object-fit-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-about">
+                        <h3 class="footer-brand">PrimeEstate</h3>
+                        <p>PrimeEstate is the premier destination for premium land acquisition and investment opportunities. With decades of experience, we help clients find the perfect properties for development, investment, or personal use.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> About</a></li>
+                        <li><a href="#properties"><i class="fas fa-chevron-right"></i> Properties</a></li>
+                        <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="footer-heading">Property Types</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Residential Land</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Commercial Land</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Agricultural Land</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Industrial Land</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Recreational Land</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="footer-heading">Newsletter</h4>
+                    <p class="mb-3" style="color: rgba(255, 255, 255, 0.7);">Subscribe to our newsletter for the latest property listings and investment opportunities.</p>
+                    <div class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Your Email Address">
+                        <button class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 PrimeEstate. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Property Modal -->
+    <div class="modal fade" id="propertyModal" tabindex="-1" aria-labelledby="propertyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="propertyModalLabel">Property Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="propertyModalContent">
+                    <!-- Content will be loaded dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap & jQuery JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
