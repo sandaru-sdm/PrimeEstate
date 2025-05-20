@@ -259,3 +259,170 @@
                 });
             }, 500);
         });
+
+        // Function to filter properties based on selected criteria
+function filterProperties() {
+    const locationFilter = document.getElementById('location-filter').value;
+    const priceFilter = document.getElementById('price-filter').value;
+    const sizeFilter = document.getElementById('size-filter').value;
+    
+    // Create a copy of the original properties array to filter
+    let filteredProperties = [...properties];
+    
+    // Filter by location
+    if (locationFilter !== 'All Locations') {
+        // Extract city from location
+        filteredProperties = filteredProperties.filter(property => {
+            const city = property.location.split(',')[0].trim();
+            
+            // Match location categories based on cities in your data
+            if (locationFilter === 'Urban') {
+                return ['New York', 'Austin', 'Charleston'].includes(city);
+            } else if (locationFilter === 'Suburban') {
+                return ['Riverdale', 'Boulder'].includes(city);
+            } else if (locationFilter === 'Rural') {
+                return ['Lancaster', 'Asheville'].includes(city);
+            }
+            return true;
+        });
+    }
+    
+    // Filter by price
+    if (priceFilter !== 'All Prices') {
+        filteredProperties = filteredProperties.filter(property => {
+            // Extract numeric price value (remove $ and commas)
+            const priceValue = parseFloat(property.price.replace(/[$,]/g, ''));
+            
+            if (priceFilter === 'Under $250,000') {
+                return priceValue < 250000;
+            } else if (priceFilter === '$250,000 - $500,000') {
+                return priceValue >= 250000 && priceValue <= 500000;
+            } else if (priceFilter === '$500,000 - $1,000,000') {
+                return priceValue > 500000 && priceValue <= 1000000;
+            } else if (priceFilter === 'Over $1,000,000') {
+                return priceValue > 1000000;
+            }
+            return true;
+        });
+    }
+    
+    // Filter by size
+    if (sizeFilter !== 'All Sizes') {
+        filteredProperties = filteredProperties.filter(property => {
+            // Extract numeric size value and convert to number
+            const sizeValue = parseFloat(property.size.split(' ')[0]);
+            
+            if (sizeFilter === 'Under 1 Acre') {
+                return sizeValue < 1;
+            } else if (sizeFilter === '1-5 Acres') {
+                return sizeValue >= 1 && sizeValue <= 5;
+            } else if (sizeFilter === '5-10 Acres') {
+                return sizeValue > 5 && sizeValue <= 10;
+            } else if (sizeFilter === 'Over 10 Acres') {
+                return sizeValue > 10;
+            }
+            return true;
+        });
+    }
+    
+    // Display filtered properties or show "No results" message
+    if (filteredProperties.length === 0) {
+        const container = document.getElementById('properties-container');
+        container.innerHTML = '<div class="col-12 text-center py-5"><p>No properties match your criteria. Try adjusting your filters.</p></div>';
+    } else {
+        loadProperties(filteredProperties);
+    }
+    
+    // Add animation to show filtering is complete
+    document.getElementById('properties-container').classList.add('fade');
+    setTimeout(() => {
+        document.getElementById('properties-container').classList.remove('fade');
+    }, 300);
+    
+    // Update results count
+    updateResultsCount(filteredProperties.length);
+}
+
+// Function to update results count
+function updateResultsCount(count) {
+    // Create or update results counter element
+    let resultsCounter = document.getElementById('results-counter');
+    
+    if (!resultsCounter) {
+        resultsCounter = document.createElement('div');
+        resultsCounter.id = 'results-counter';
+        resultsCounter.className = 'results-counter mb-3';
+        const propertiesContainer = document.getElementById('properties-container');
+        propertiesContainer.parentNode.insertBefore(resultsCounter, propertiesContainer);
+    }
+    
+    resultsCounter.innerHTML = `<p><strong>${count}</strong> properties found</p>`;
+}
+
+// Initialize filter functionality
+document.getElementById('filter-btn').addEventListener('click', function() {
+    filterProperties();
+});
+
+// Add clear filters button
+function addClearFiltersButton() {
+    const filterBar = document.querySelector('.filter-bar .row');
+    
+    // Check if button already exists
+    if (!document.getElementById('clear-filters')) {
+        const clearFilterDiv = document.createElement('div');
+        clearFilterDiv.className = 'col-12 mt-3';
+        clearFilterDiv.innerHTML = '<button id="clear-filters" class="btn btn-outline-secondary btn-sm">Clear Filters</button>';
+        filterBar.appendChild(clearFilterDiv);
+        
+        // Add event listener
+        document.getElementById('clear-filters').addEventListener('click', function() {
+            // Reset all filter dropdowns
+            document.getElementById('location-filter').value = 'All Locations';
+            document.getElementById('price-filter').value = 'All Prices';
+            document.getElementById('size-filter').value = 'All Sizes';
+            
+            // Load all properties
+            loadProperties(properties);
+            
+            // Update counter
+            updateResultsCount(properties.length);
+        });
+    }
+}
+
+// Initialize price filter with correct values (replace in the existing HTML)
+function initializePriceFilter() {
+    const priceFilter = document.getElementById('price-filter');
+    priceFilter.innerHTML = `
+        <option selected>All Prices</option>
+        <option>Under $250,000</option>
+        <option>$250,000 - $500,000</option>
+        <option>$500,000 - $1,000,000</option>
+        <option>Over $1,000,000</option>
+    `;
+}
+
+// Add event listeners for on-change filtering (for better UX)
+function addImmediateFiltering() {
+    const filters = [
+        document.getElementById('location-filter'),
+        document.getElementById('price-filter'),
+        document.getElementById('size-filter')
+    ];
+    
+    filters.forEach(filter => {
+        filter.addEventListener('change', function() {
+            filterProperties();
+        });
+    });
+}
+
+// Initialize all filters on page load
+document.addEventListener('DOMContentLoaded', function() {
+    loadProperties(properties);
+    addClearFiltersButton();
+    initializePriceFilter();
+    addImmediateFiltering();
+    updateResultsCount(properties.length);
+});
