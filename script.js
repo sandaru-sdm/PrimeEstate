@@ -12,7 +12,7 @@
                 location: "Riverdale, NY",
                 price: "$450,000",
                 description: "Prime development land with stunning river views. This 5-acre parcel offers excellent opportunities for residential or commercial development with all utilities available at the property line. Zoned for mixed-use development.",
-                image: "/api/placeholder/600/400",
+                image: "../assets/land3.jpg",
                 badge: "Featured",
                 size: "5 acres",
                 type: "Commercial",
