@@ -29,7 +29,7 @@
                 location: "Boulder, CO",
                 price: "$325,000",
                 description: "Beautiful mountain estate lot with panoramic views. This 3-acre parcel is located in an exclusive gated community with amenities including private trails, community center, and 24-hour security. Perfect for your luxury custom home.",
-                image: "/api/placeholder/600/400",
+                image: "../assets/land4.jpg",
                 badge: "Premium",
                 size: "3 acres",
                 type: "Residential",
