@@ -60,10 +60,10 @@
             {
                 id: 4,
                 title: "Coastal Development Parcel",
-                location: "Charleston, SC",
-                price: "$1,200,000",
+                location: "Anuradhapura",
+                price: "Rs. 8,200,000",
                 description: "Rare coastal development opportunity with ocean views. This 2-acre parcel is approved for multi-family or hotel development with all preliminary permits in place. Located just minutes from downtown and beach access.",
-                image: "/api/placeholder/600/400",
+                image: "../assets/land6.jpg",
                 badge: "Premium",
                 size: "2 acres",
                 type: "Commercial",
