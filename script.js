@@ -77,10 +77,10 @@
             {
                 id: 5,
                 title: "Wooded Home Site",
-                location: "Asheville, NC",
-                price: "$125,000",
+                location: "Colombo",
+                price: "Rs. 80,250,000",
                 description: "Secluded wooded home site in the rolling hills. This 1.5-acre lot offers privacy and natural beauty with mature hardwood trees and a small creek. Building site is already cleared and driveway installed.",
-                image: "/api/placeholder/600/400",
+                image: "../assets/land7.jpg",
                 badge: null,
                 size: "1.5 acres",
                 type: "Residential",
