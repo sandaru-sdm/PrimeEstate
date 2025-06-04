@@ -94,10 +94,10 @@
             {
                 id: 6,
                 title: "Downtown Commercial Lot",
-                location: "Austin, TX",
-                price: "$850,000",
+                location: "Gampaha",
+                price: "Rs. 8,500,000",
                 description: "Prime commercial lot in downtown growth area. This 0.75-acre corner lot offers excellent visibility and access. Zoned for retail, office, or mixed-use development with high foot traffic and surrounded by new developments.",
-                image: "/api/placeholder/600/400",
+                image: "../assets/land8.jpg",
                 badge: "Featured",
                 size: "0.75 acres",
                 type: "Commercial",
