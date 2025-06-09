@@ -46,7 +46,7 @@
                 location: "Galle",
                 price: "Rs. 2,750,000",
                 description: "Productive agricultural land with rich soil and excellent irrigation. This 15-acre property has been actively farmed for decades and includes a small barn and equipment shed. Perfect for organic farming or traditional agriculture.",
-                image: "../assets/land5.jpg",
+                image: "./assets/land5.jpg",
                 badge: null,
                 size: "15 acres",
                 type: "Agricultural",
